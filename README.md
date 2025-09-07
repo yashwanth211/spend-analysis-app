@@ -1,12 +1,20 @@
-# React + Vite
+A simple full-stack MERN application to visualize and analyze your Swiggy order history.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app takes a JSON file of your order data and transforms it into an interactive dashboard with charts and key statistics, giving you insights into your spending habits.
 
-Currently, two official plugins are available:
+Note: This is a proof-of-concept and uses a sample JSON file, as real-time data access is not available.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+How It Works
+This is a full-stack application with a client-server architecture:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend (React): A clean user interface built with React and Vite that allows for file upload. It uses Chart.js to render the interactive dashboard.
+
+Backend (Node.js/Express): A simple Express server that provides a single API endpoint. It accepts the uploaded file, performs all the data calculations, and sends the analysis back to the client.
+
+Tech Stack
+Frontend: React, Vite, Chart.js
+
+Backend: Node.js, Express.js
+
+File Handling: Multer
